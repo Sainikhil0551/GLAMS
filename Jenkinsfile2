@@ -1,0 +1,10 @@
+pipeline {
+    agent any
+      stages {
+          stage ("Build") {
+              steps {
+              sh "docker build -t sainikhil1999/myapp:latest ."
+              }
+             }
+           }
+   }
