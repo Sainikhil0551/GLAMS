@@ -55,5 +55,6 @@ spec:
             steps {
                 sh 'docker push sainikhil1999/myapp:v1'
             }
+         }
     }
 }
