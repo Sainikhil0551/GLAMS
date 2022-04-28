@@ -56,13 +56,6 @@ spec:
                 sh 'docker push sainikhil1999/myapp'
             }
          }
-        stage('publish') {
-            steps {
-                container('go') { withCredentials([ kubeconfigFile( credentialsId: env.KUBECONFIG_CREDENTIAL_ID, variable: 'KUBECONFIG') ]) { 
-                    sh 'envsubst < devops-go-sample/manifest/multi-cluster-deploy.yaml | kubectl apply -f -'
-                }
-             }
-            }
-        }
+       
     }
 }
