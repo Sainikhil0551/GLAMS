@@ -56,6 +56,61 @@ spec:
                 sh 'docker push sainikhil1999/myapp'
             }
          }
+        agent {
+            kubernetes {
+                // Rather than inline YAML, in a multibranch Pipeline you could use: yamlFile 'jenkins-pod.yaml'
+            // Or, to avoid YAML:
+            // containerTemplate {
+            //     name 'shell'
+            //     image 'ubuntu'
+            //     command 'sleep'
+            //     args 'infinity'
+            // }
+             yaml '''
+             
+             
+ apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+
+  name: myapp
+
+spec:
+
+  selector:
+
+    matchLabels:
+
+      run: myapp
+
+  replicas: 1
+
+  template:
+
+    metadata:
+
+      labels:
+
+        run: myapp
+
+    spec:
+
+      containers:
+
+      - name: myapp
+
+        image: sainikhil1999/myapp
+
+        ports:
+
+        - containerPort: 5000
+             
+             
+            }
+        }
+            
        
     }
 }
