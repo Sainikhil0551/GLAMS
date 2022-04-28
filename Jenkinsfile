@@ -69,7 +69,6 @@ spec:
             // }
              yaml '''
              
-  --- 
 apiVersion: apps/v1
 kind: Deployment
 metadata: 
@@ -91,6 +90,7 @@ spec:
           ports: 
             - 
               containerPort: 5000
+ '''
              
             }
   }
