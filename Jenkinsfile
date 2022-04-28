@@ -43,8 +43,17 @@ spec:
     stages {
         stage('docker build') {
             steps {
-                sh 'docker build -t anandsadhu/myapp .'
+                sh 'docker build -t sainikhil1999/myapp .'
             }
         }
+        stage('docker login') {
+            steps {
+                sh 'docker login -u sainikhil1999 -p Akhil@1999'
+            }
+        }
+         stage('docker push') {
+            steps {
+                sh 'docker push sainikhil1999/myapp:v1'
+            }
     }
 }
