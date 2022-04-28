@@ -69,46 +69,29 @@ spec:
             // }
              yaml '''
              
-             
- apiVersion: apps/v1
-
+  --- 
+apiVersion: apps/v1
 kind: Deployment
-
-metadata:
-
+metadata: 
   name: myapp
-
-spec:
-
-  selector:
-
-    matchLabels:
-
-      run: myapp
-
+spec: 
   replicas: 1
-
-  template:
-
-    metadata:
-
-      labels:
-
+  selector: 
+    matchLabels: 
+      run: myapp
+  template: 
+    metadata: 
+      labels: 
         run: myapp
-
-    spec:
-
-      containers:
-
-      - name: myapp
-
-        image: sainikhil1999/myapp
-
-        ports:
-
-        - containerPort: 5000
-             
+    spec: 
+      containers: 
+        - 
+          image: sainikhil1999/myapp
+          name: myapp
+          ports: 
+            - 
+              containerPort: 5000
              
             }
       }
-    }
+ }
