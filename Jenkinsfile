@@ -93,5 +93,5 @@ spec:
               containerPort: 5000
              
             }
-      }
+  }
  }
