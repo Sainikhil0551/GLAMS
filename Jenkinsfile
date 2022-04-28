@@ -53,7 +53,7 @@ spec:
         }
          stage('docker push') {
             steps {
-                sh 'docker push sainikhil1999/myapp:v1'
+                sh 'docker push sainikhil1999/myapp'
             }
          }
     }
