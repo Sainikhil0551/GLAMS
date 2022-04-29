@@ -56,5 +56,10 @@ spec:
             sh 'docker push sainikhil1999/glams'
            }
     }
+       stage('Deploy') {
+           steps {
+               sh 'kubectl apply -f pod.yaml'
+           }
+       }
   }
 }
