@@ -43,19 +43,18 @@ defaultContainer 'shell'
 stages {
 stage('docker build') {
 steps {
-sh 'docker build -t sainikhil1999/myapp .'
+sh 'docker build -t sainikhil1999/glams .'
 }
 }
 stage('docker login') {
 steps {
-sh 'docker login -u sainikhil1999 -p Akhil@1999'
+sh 'docker login -u sainikhil19999 -p Akhil@1999'
 }
 }
 stage('docker push') {
 steps {
-sh 'docker push sainikhil1999/myapp'
+sh 'docker push sainikhil1999/glams'
 }
 }
-
 }
 }
