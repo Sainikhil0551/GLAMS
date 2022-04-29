@@ -1,0 +1,22 @@
+--- 
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: glams
+spec: 
+  replicas: 1
+  selector: 
+    matchLabels: 
+      run: glams
+  template: 
+    metadata: 
+      labels: 
+        run: glams
+    spec: 
+      containers: 
+        - 
+          image: sainikhil1999/glams  
+          name: glams
+          ports: 
+            - 
+              containerPort: 5000
