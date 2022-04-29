@@ -19,4 +19,4 @@ spec:
           name: glams
           ports: 
             - 
-              containerPort: 80
+              containerPort: 6000
