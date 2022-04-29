@@ -43,7 +43,7 @@ spec:
    stages {
         stage('docker build') {
             steps {
-                sh 'docker build -t sainikhil1999/myapp .'
+                sh 'docker build -t sainikhil1999/glams .'
        }
     }
    stage('docker login') {
@@ -53,7 +53,7 @@ spec:
     }
     stage('docker push') {
         steps {
-            sh 'docker push sainikhil1999/myapp'
+            sh 'docker push sainikhil1999/glams'
            }
     }
   }
