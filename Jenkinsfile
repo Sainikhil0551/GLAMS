@@ -58,7 +58,7 @@ spec:
     }
        stage('Deploy') {
            steps {
-               sh 'kubectl apply -n jenkins -f Deployment.yaml'
+               sh 'kubectl create -f Deployment.yaml'
            }
        }
   }
