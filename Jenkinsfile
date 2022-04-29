@@ -56,11 +56,6 @@ spec:
             sh 'docker push sainikhil1999/glams'
            }
     }
-       stage('Details') {
-           steps {
-               sh 'kubectl get nodes -n jenkins'
-           }
-       }
        stage('Deploy') {
            steps {
                sh 'kubectl apply -n jenkins -f Deployment.yaml'
