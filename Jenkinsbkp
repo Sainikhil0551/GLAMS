@@ -16,8 +16,9 @@ pipeline {
     stage('Build Docker Image') {
       steps {
         container('docker') {  
-          sh "docker build -t pshivaprasadymailcom/promo-app:dev ."  // when we run docker in this step, we're running it via a shell on the docker build-pod container, 
-          sh "docker push pshivaprasadymailcom/promo-app:dev"        // which is just connecting to the host docker deaemon
+           sh 'docker build -t sainikhil1999/maven:latest .'  // when we run docker in this step, we're running it via a shell on the docker build-pod container, 
+           sh 'docker login -u sainikhil1999 -p Akhil@1999'       
+           sh 'docker push sainikhil1999/maven:latest'     
         }
       }
     }
