@@ -58,7 +58,7 @@ spec:
     }
        stage('Deploy') {
            steps {
-               sh 'kubectl apply -f pod.yaml'
+               sh 'kubectl apply -n jenkins -f pod.yaml'
            }
        }
   }
