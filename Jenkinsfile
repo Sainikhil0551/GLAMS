@@ -59,8 +59,8 @@ spec:
        stage('Deploy') {
            steps {
                sh '''
-               kubectl apply -f service.yaml
-               kubectl apply -f Deployment.yaml
+               kubectl create -f service.yaml
+               kubectl create -f Deployment.yaml
                '''
            }
        }
