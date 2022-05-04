@@ -4,7 +4,7 @@ kind: Service
 metadata: 
   labels: 
     run: glams
-  name: glams
+  name: G7
   namespace: jenkins
 spec: 
   ports: 
