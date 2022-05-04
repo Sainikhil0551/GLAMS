@@ -61,7 +61,6 @@ spec:
                sh '''
                kubectl create -f service.yaml
                kubectl create -f Deployment.yaml
-               kubectl create -f ClusterRoleBinding.yaml
                '''
            }
        }
