@@ -59,9 +59,9 @@ spec:
        stage('Deploy') {
            steps {
                sh '''
-               kubectl create -f service-account.yaml
                kubectl create -f service.yaml
                kubectl create -f Deployment.yaml
+               kubectl create -f ClusterRoleBinding.yaml
                '''
            }
        }
