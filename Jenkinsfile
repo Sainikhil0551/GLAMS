@@ -65,5 +65,9 @@ spec:
          sh 'helm version'
            }
         }
+       stage('helm') {
+           steps {
+               sh 'helm install demoapp .'
+       }
      }
   }
