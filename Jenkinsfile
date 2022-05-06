@@ -59,8 +59,7 @@ spec:
        stage('Deploy') {
            steps {
                sh '''
-               kubectl create -f service.yaml
-               kubectl create -f Deployment.yaml
+               helm install firsthelm .
                '''
            }
        }
