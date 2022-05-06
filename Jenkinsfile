@@ -67,7 +67,7 @@ spec:
         }
        stage('helm') {
            steps {
-               sh 'helm install demoapp .'
+               sh 'helm install firsthelm .'
            }
        }
      }
