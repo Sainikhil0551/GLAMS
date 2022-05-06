@@ -57,11 +57,12 @@ spec:
            }
     }
        stage('Deploy') {
-           steps {
-               sh '''
-               helm install firsthelm .
-               '''
-           }
+       steps {
+        sh '''
+        helm3 upgrade --install appname \
+        ./charts/firsthelm\
+            '''
+        }
        }
   }
 }
