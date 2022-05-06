@@ -16,7 +16,7 @@ kind: Pod
 spec:
   containers:
   - name: shell
-    image: registry.glams.com/glams/jenkins-agent:latest
+    image: sainikhil1999/firstapp:1.16.0
     command:
     - sleep
     args:
@@ -43,7 +43,7 @@ spec:
    stages {
         stage('docker build') {
             steps {
-                sh 'docker build -t sainikhil1999/glams .'
+                sh 'docker build -t sainikhil1999/demoapp .'
        }
     }
    stage('docker login') {
@@ -53,7 +53,7 @@ spec:
     }
     stage('docker push') {
         steps {
-            sh 'docker push sainikhil1999/glams'
+            sh 'docker push sainikhil1999/demoapp'
            }
     }
        stage('Deploy') {
