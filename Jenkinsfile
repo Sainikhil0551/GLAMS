@@ -59,7 +59,7 @@ spec:
        stage('Deploy') {
        steps {
         sh '''
-        helm3 upgrade --install appname \
+         helm upgrade firsthelm \
         ./charts/firsthelm\
             '''
         }
