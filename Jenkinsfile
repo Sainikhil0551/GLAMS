@@ -56,14 +56,12 @@ spec:
             sh 'docker push sainikhil1999/demoapp'
            }
     }
-        stage('Run Helm') {
-      steps {
-      script {      
-      container('helm') {
-        sh "helm ls"
+      stage('Run Helm') {
+          steps {
+           script {      
+            sh "helm ls"
+        } 
        }
-      } 
-      }
      }
   }
 }
