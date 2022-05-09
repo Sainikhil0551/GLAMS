@@ -66,7 +66,7 @@ spec:
        stage('helm') {
            steps {
                sh 'helm version'
-               sh 'helm install demohelm .'
+               sh 'helm upgrade --install dotnet1 dotnet-app'
            }
        }
      }
