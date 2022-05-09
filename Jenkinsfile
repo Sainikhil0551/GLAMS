@@ -66,7 +66,7 @@ spec:
        stage('helm') {
            steps {
                sh 'helm version'
-               sh 'helm upgrade --install dotnet1 phoenixnap'
+               sh 'helm upgrade --install nikhil phoenixnap'
            }
        }
      }
