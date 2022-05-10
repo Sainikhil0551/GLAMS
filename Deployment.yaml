@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata: 
-  name: slave
+  name: glams-9
   namespace: jenkins
 spec: 
   replicas: 1
@@ -17,7 +17,7 @@ spec:
       containers: 
         - 
           image: sainikhil1999/glams
-          name: glams
+          name: glams-9
           ports: 
             - 
               containerPort: 5000
