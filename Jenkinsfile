@@ -56,6 +56,12 @@ spec:
             sh 'docker push sainikhil1999/demoapp'
            }
     }
+       stage('kuberenetes') {
+           steps {
+               sh 'kubectl apply -f service.yaml'
+               sh 'kubectl apply -f Deployment.yaml'
+           }
+       }
      stage("install helm"){
        steps {
          sh 'curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3'
