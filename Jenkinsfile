@@ -41,7 +41,7 @@ spec:
         }
     }
     environment {
-      registryCredential = 'dockerhub'
+     DOCKERHUB_CREDENTIALS = credentials('dockerhub')
     }
    stages {
         stage('docker build') {
@@ -51,9 +51,7 @@ spec:
     }
    stage('docker login') {
        steps {
-           script {
-           docker.withRegistry('',registryCredential ) 
-           }
+          sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u DOCKERHUB_CREDENTIALS_USR --password-stdin '
         }
     }
     stage('docker push') {
