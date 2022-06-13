@@ -51,7 +51,9 @@ spec:
     }
    stage('docker login') {
        steps {
+           script {
            docker.withRegistry('',registryCredential ) 
+           }
         }
     }
     stage('docker push') {
