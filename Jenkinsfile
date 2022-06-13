@@ -51,7 +51,7 @@ spec:
     }
    stage('docker login') {
        steps {
-            sh 'echo $DOCKER_LOGIN_PSW | docker login -u DOCKER_LOGIN_USR --password-stdin'
+            sh 'echo $DOCKER_LOGIN_PSW | docker login -u Sainikhil -p -stdin'
         }
     }
     stage('docker push') {
