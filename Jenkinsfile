@@ -40,6 +40,9 @@ spec:
             defaultContainer 'shell'
         }
     }
+    environment {
+        DOCKERHUB_CREDENTIALS = credentials('SaiNikhildockerhub')
+    }
    stages {
         stage('docker build') {
             steps {
@@ -48,7 +51,7 @@ spec:
     }
    stage('docker login') {
        steps {
-            sh 'docker login -u sainikhil1999 -p Akhil@1999'
+            sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u DOCKERHUB_CREDENTIALS_USR --password-stdir '
         }
     }
     stage('docker push') {
