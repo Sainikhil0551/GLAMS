@@ -41,7 +41,7 @@ spec:
         }
     }
     environment {
-        DOCKERHUB_CREDENTIALS = credentials('SaiNikhildockerhub')
+        DOCKERHUB_CREDENTIALS = credentials('dockerhub')
     }
    stages {
         stage('docker build') {
