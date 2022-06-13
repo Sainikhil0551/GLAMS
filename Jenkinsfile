@@ -41,7 +41,7 @@ spec:
         }
     }
     environment {
-        DOCKER_LOGIN = credentials('dockerhub')
+       DOCKERHUB_CREDENTIALS = credentials('dockerhub')
     }
    stages {
         stage('docker build') {
@@ -51,7 +51,7 @@ spec:
     }
    stage('docker login') {
        steps {
-            sh 'echo $DOCKER_LOGIN_PSW | docker login -u DOCKERHUB_LOGIN_USR --password-stdin '
+           sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u DOCKERHUB_CREDENTIALS_USR --password-stdin '
         }
     }
     stage('docker push') {
